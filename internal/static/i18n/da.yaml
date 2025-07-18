@@ -1,0 +1,948 @@
+Errors:
+  Internal: Der opstod en intern fejl
+  NoChangesFound: Ingen ændringer
+  OriginNotAllowed: Denne "Origin" er ikke tilladt
+  IDMissing: ID mangler
+  ResourceOwnerMissing: Ressourceejerens organisation mangler
+  RemoveFailed: Kunne ikke fjernes
+  ProjectionName:
+    Invalid: Ugyldigt projektnavn
+  Assets:
+    EmptyKey: Ressourcenøgle er tom
+    Store:
+      NotInitialized: Ressourcelager ikke initialiseret
+      NotConfigured: Ressourcelager ikke konfigureret
+    Bucket:
+      Internal: Intern fejl ved oprettelse af bucket
+      AlreadyExists: Bucket findes allerede
+      CreateFailed: Bucket blev ikke oprettet
+      ListFailed: Buckets kunne ikke læses
+      RemoveFailed: Bucket blev ikke slettet
+      SetPublicFailed: Kunne ikke gøre bucket offentlig
+    Object:
+      PutFailed: Objektet blev ikke oprettet
+      GetFailed: Objektet kunne ikke læses
+      NotFound: Objektet blev ikke fundet
+      PresignedTokenFailed: Signeret token kunne ikke oprettes
+      ListFailed: Objektlisten kunne ikke læses
+      RemoveFailed: Objektet kunne ikke fjernes
+  Limit:
+    ExceedsDefault: Grænsen overskrider standardgrænsen
+  Limits:
+    NotFound: Grænser mangler
+    NoneSpecified: Ingen grænser angivet
+    Instance:
+      Blocked: Instansen er blokeret
+  Restrictions:
+    NoneSpecified: Ingen restriktioner angivet
+    DefaultLanguageMustBeAllowed: Standardsproget skal være tilladt
+  Language:
+    NotParsed: Kunne ikke fortolke sprog
+    NotSupported: Sproget understøttes ikke
+    NotAllowed: Sproget er ikke tilladt
+    Undefined: Sproget er udefineret
+    Duplicate: Sproget har dubletter
+  OIDCSettings:
+    NotFound: OIDC-konfiguration blev ikke fundet
+    AlreadyExists: OIDC-konfiguration findes allerede
+  SecretGenerator:
+    AlreadyExists: Hemmelig kode-generator findes allerede
+    TypeMissing: Type af hemmelig kode-generator mangler
+    NotFound: Hemmelig kode-generator blev ikke fundet
+  SMSConfig:
+    NotFound: SMS-konfiguration blev ikke fundet
+    AlreadyActive: SMS-konfiguration er allerede aktiv
+    AlreadyDeactivated: SMS-konfiguration er allerede deaktiveret
+  SMTP:
+    NotEmailMessage: Beskeden er ikke EmailMessage
+    RequiredAttributes: Emne, modtager og indhold skal angives, men nogle eller alle er tomme
+    CouldNotSplit: Kunne ikke opdele vært og port til forbindelse til smtp
+    CouldNotDial: Kunne ikke kontakte SMTP-serveren, tjek porten, firewall-problemer...
+    CouldNotDialTLS: Kunne ikke kontakte SMTP-serveren med TLS, tjek porten, firewall-problemer...
+    CouldNotCreateClient: Kunne ikke oprette smtp-klient
+    CouldNotStartTLS: Kunne ikke starte tls
+    CouldNotAuth: Kunne ikke tilføje smtp auth, tjek om både dit brugernavn og adgangskode er korrekte, hvis de er korrekte, kræver din udbyder måske en auth-metode, som ikke understøttes af ZITADEL
+    CouldNotSetSender: Kunne ikke indstille afsender
+    CouldNotSetRecipient: Kunne ikke angive modtager
+  SMTPConfig:
+    TestPassword: Adgangskoden til testen blev ikke fundet
+    NotFound: SMTP-konfiguration blev ikke fundet
+    AlreadyExists: SMTP-konfiguration findes allerede
+    AlreadyDeactivated: SMTP-konfiguration er allerede deaktiveret
+    SenderAdressNotCustomDomain: Afsenderadressen skal indstilles som brugerdefineret domæne på instansen.
+    TestEmailNotFound: E-mailadressen til testen blev ikke fundet
+  Notification:
+    NoDomain: Ingen domæne blev fundet til meddelelsen
+  User:
+    NotFound: Brugeren blev ikke fundet
+    AlreadyExists: Brugeren findes allerede
+    NotFoundOnOrg: Brugeren blev ikke fundet i den valgte organisation
+    NotAllowedOrg: Brugeren er ikke medlem af den nødvendige organisation
+    UserIDMissing: Bruger-ID mangler
+    UserIDWrong: Den anmodede bruger er ikke den samme som den godkendte bruger
+    DomainPolicyNil: Organisationspolitikken er tom
+    EmailAsUsernameNotAllowed: E-mail er ikke tilladt som brugernavn
+    Invalid: Brugerdata er ugyldige
+    DomainNotAllowedAsUsername: Domænet er allerede reserveret og kan ikke bruges
+    AlreadyInactive: Brugeren er allerede inaktiv
+    NotInactive: Brugeren er ikke inaktiv
+    CantDeactivateInitial: Brugere med status 'Initial' kan kun slettes, ikke deaktiveres
+    ShouldBeActiveOrInitial: Brugeren er ikke aktiv eller initial
+    AlreadyInitialised: Brugeren er allerede initialiseret
+    NotInitialised: Brugeren er endnu ikke initialiseret
+    NotLocked: Brugeren er ikke låst
+    NoChanges: Ingen ændringer blev fundet
+    InitCodeNotFound: Initialiseringskoden blev ikke fundet
+    UsernameNotChanged: Brugernavnet blev ikke ændret
+    InvalidURLTemplate: URL-skabelonen er ugyldig
+    Profile:
+      NotFound: Profil blev ikke fundet
+      NotChanged: Profil blev ikke ændret
+      Empty: Profil er tom
+      FirstNameEmpty: Fornavn i profil er tomt
+      LastNameEmpty: Efternavn i profil er tomt
+      IDMissing: Profil-ID mangler
+    Email:
+      NotFound: E-mail blev ikke fundet
+      Invalid: E-mail er ugyldig
+      AlreadyVerified: E-mail er allerede verificeret
+      NotChanged: E-mail blev ikke ændret
+      Empty: E-mail er tom
+      IDMissing: E-mail-ID mangler
+    Phone:
+      NotFound: Mobilnr blev ikke fundet
+      Invalid: Mobilnr er ugyldig
+      AlreadyVerified: Mobilnr er allerede verificeret
+      Empty: Mobilnr er tom
+      NotChanged: Mobilnr blev ikke ændret
+      VerifyingRemovalIsNotSupported: Verificering af fjernelse understøttes ikke
+    Address:
+      NotFound: Adresse blev ikke fundet
+      NotChanged: Adresse blev ikke ændret
+    Machine:
+      Key:
+        NotFound: Maskin-nøgle blev ikke fundet
+        AlreadyExisting: Maskin-nøgle findes allerede
+        Invalid: Offentlig nøgle er ikke en gyldig offentlig RSA-nøgle i PKIX-format med PEM-enkodning
+      Secret:
+        NotExisting: Hemmelig kode findes ikke
+        Invalid: Hemmelig kode er ugyldig
+        CouldNotGenerate: Hemmelig kode kunne ikke genereres
+    PAT:
+      NotFound: Personlig adgangstoken blev ikke fundet
+    NotHuman: Brugeren skal være en person
+    NotMachine: Brugeren skal være en maskine
+    WrongType: Ikke tilladt for denne brugertype
+    NotAllowedToLink: Brugere må ikke linke med ekstern loginudbyder
+    Username:
+      AlreadyExists: Brugernavn er allerede taget
+      Reserved: Brugernavn er allerede taget
+      Empty: Brugernavn er tomt
+    Code:
+      Empty: Kode er tom
+      NotFound: Kode blev ikke fundet
+      Expired: Kode er udløbet
+      GeneratorAlgNotSupported: Generatoralgoritmen understøttes ikke
+      Invalid: Koden er ugyldig
+    Password:
+      NotFound: Adgangskode blev ikke fundet
+      Empty: Adgangskode er tom
+      Invalid: Adgangskode er ugyldig
+      NotSet: Brugeren har ikke indstillet en adgangskode
+      NotChanged: Ny adgangskode kan ikke være den samme som din nuværende adgangskode
+      NotSupported: Adgangskodehash-kodning understøttes ikke. Tjek https://zitadel.com/docs/concepts/architecture/secrets#hashed-secrets
+    PasswordComplexityPolicy:
+      NotFound: Adgangskodepolitik blev ikke fundet
+      MinLength: Adgangskoden er for kort
+      MinLengthNotAllowed: Angivet minimumslængde er ikke tilladt
+      HasLower: Adgangskode skal indeholde små bogstaver
+      HasUpper: Adgangskode skal indeholde store bogstaver
+      HasNumber: Adgangskode skal indeholde tal
+      HasSymbol: Adgangskode skal indeholde symbol
+    ExternalIDP:
+      Invalid: Ekstern IdP ugyldig
+      IDPConfigNotExisting: IdP-leverandør ugyldig for denne organisation
+      NotAllowed: Ekstern IdP ikke tilladt
+      MinimumExternalIDPNeeded: Mindst en IdP skal tilføjes
+      AlreadyExists: Ekstern IdP er allerede taget
+      NotFound: Ekstern IdP blev ikke fundet
+      LoginFailed: Login hos ekstern IdP mislykkedes
+    MFA:
+      OTP:
+        AlreadyReady: Multifaktor OTP (OneTimePassword) er allerede indstillet
+        NotExisting: Multifaktor OTP (OneTimePassword) findes ikke
+        NotReady: Multifaktor OTP (OneTimePassword) er ikke klar
+        InvalidCode: Ugyldig kode
+      U2F:
+        NotExisting: U2F findes ikke
+      Passwordless:
+        NotExisting: Lösenordsfri findes ikke
+    WebAuthN:
+      NotFound: WebAuthN-token kunne ikke findes
+      BeginRegisterFailed: WebAuthN-registrering mislykkedes
+      MarshalError: Fejl ved serialisering af data
+      ErrorOnParseCredential: Fejl ved fortolkning af godkendelsesdata
+      CreateCredentialFailed: Fejl ved oprettelse af godkendelse
+      BeginLoginFailed: WebAuthN-login mislykkedes
+      ValidateLoginFailed: Fejl ved validering af loginoplysninger
+      CloneWarning: Godkendelse kan være klonet
+    RefreshToken:
+      Invalid: Opdateringstoken er ugyldigt
+      NotFound: Opdateringstoken blev ikke fundet
+  Instance:
+    NotFound: Instans blev ikke fundet
+    AlreadyExists: Instans findes allerede
+    NotChanged: Instans blev ikke ændret
+  Org:
+    AlreadyExists: Organisationens navn er allerede taget
+    Invalid: Organisationen er ugyldig
+    AlreadyDeactivated: Organisation er allerede deaktiveret
+    AlreadyActive: Organisationen er allerede aktiv
+    Empty: Organisationen er tom
+    NotFound: Organisationen blev ikke fundet
+    NotChanged: Organisationen blev ikke ændret
+    DefaultOrgNotDeletable: Standardorganisationen må ikke slettes
+    ZitadelOrgNotDeletable: Organisationen med ZITADEL-projekt må ikke slettes
+    InvalidDomain: Ugyldig domæne
+    DomainMissing: Domæne mangler
+    DomainNotOnOrg: Domænen findes ikke på organisationen
+    DomainNotVerified: Domænen er ikke verificeret
+    DomainAlreadyVerified: Domænen er allerede verificeret
+    DomainVerificationTypeInvalid: Domæneverificeringstype er ugyldig
+    DomainVerificationMissing: Domæneverificering er ikke påbegyndt
+    DomainVerificationFailed: Domæneverificering mislykkedes
+    DomainVerificationTXTNotFound: TXT-posten _zitadel-challenge blev ikke fundet for dit domæne. Tjek at du har tilføjet den på din DNS-server eller vent på at den nye post er blevet spredt
+    DomainVerificationTXTNoMatch: TXT-posten _zitadel-challenge er blevet fundet for dit domæne, men den indeholder ikke den rigtige token-tekst. Tjek at du har tilføjet den rigtige token på din DNS-server eller vent på at den nye post er blevet spredt
+    DomainVerificationHTTPNotFound: Filen der indeholder udfordringen blev ikke fundet på den forventede URL. Tjek at du har uploadet filen det rigtige sted med læseadgang
+    DomainVerificationHTTPNoMatch: Filen der indeholder udfordringen er blevet fundet på den forventede URL, men den indeholder ikke den rigtige token-tekst. Tjek dens indhold
+    DomainVerificationTimeout: Der opstod en timeout ved forespørgslen til DNS-serveren
+    PrimaryDomainNotDeletable: Primær domæne må ikke slettes
+    DomainNotFound: Domæne blev ikke fundet
+    MemberIDMissing: Medlems-ID mangler
+    MemberNotFound: Organisationsmedlem blev ikke fundet
+    InvalidMember: Organisationsmedlem er ugyldig
+    UserIDMissing: Bruger-ID mangler
+    PolicyAlreadyExists: Politikken findes allerede
+    PolicyNotExisting: Politikken findes ikke
+    IdpInvalid: IDP-konfigurationen er ugyldig
+    IdpNotExisting: IDP-konfigurationen findes ikke
+    OIDCConfigInvalid: OIDC IDP-konfigurationen er ugyldig
+    IdpIsNotOIDC: IDP-konfigurationen er ikke af typen OIDC
+    Domain:
+      AlreadyExists: Domænen findes allerede
+      InvalidCharacter: Kun alfanumeriske tegn, . og - er tilladt for et domæne
+      EmptyString: Ugyldige ikke-numeriske og alfabetiske tegn blev erstattet med tomme mellemrum, og det resulterende domæne er en tom streng
+    IDP:
+      InvalidSearchQuery: Ugyldig søgeforespørgsel
+      ClientIDMissing: ClientID mangler
+      TeamIDMissing: TeamID mangler
+      KeyIDMissing: KeyID mangler
+      PrivateKeyMissing: Privat nøgle mangler
+    LoginPolicy:
+      NotFound: Loginpolitik blev ikke fundet
+      Invalid: Loginpolitikken er ugyldig
+      RedirectURIInvalid: Standard-Redirect URI er ugyldig
+      NotExisting: Loginpolitikken findes ikke
+      AlreadyExists: Loginpolitikken findes allerede
+      IdpProviderAlreadyExisting: Identitetsleverandør findes allerede
+      IdpProviderNotExisting: Identitetsleverandør findes ikke
+      RegistrationNotAllowed: Registrering er ikke tilladt
+      UsernamePasswordNotAllowed: Login med brugernavn/adgangskode er ikke tilladt
+      MFA:
+        AlreadyExists: Multifaktor findes allerede
+        NotExisting: Multifaktor findes ikke
+        Unspecified: Multifaktor er ugyldig
+    MailTemplate:
+      NotFound: Standard e-mail skabelon blev ikke fundet
+      NotChanged: Standard e-mail skabelon er ikke ændret
+      AlreadyExists: Standard e-mail skabelon findes allerede
+      Invalid: Standard e-mail skabelon er ugyldig
+    CustomMessageText:
+      NotFound: Standardbeskedtekst blev ikke fundet
+      NotChanged: Standardbeskedtekst er ikke ændret
+      AlreadyExists: Standardbeskedtekst findes allerede
+      Invalid: Standardbeskedtekst er ugyldig
+    PasswordComplexityPolicy:
+      NotFound: Adgangskodekompleksitetspolitik blev ikke fundet
+      Empty: Adgangskodekompleksitetspolitik er tom
+      NotExisting: Adgangskodekompleksitetspolitik findes ikke
+      AlreadyExists: Adgangskodekompleksitetspolitik findes allerede
+    PasswordLockoutPolicy:
+      NotFound: Adgangskodelåsningpolitik blev ikke fundet
+      Empty: Adgangskodelåsningpolitik er tom
+      NotExisting: Adgangskodelåsningpolitik findes ikke
+      AlreadyExists: Adgangskodelåsningpolitik findes allerede
+    PasswordAgePolicy:
+      NotFound: Adgangskodealderpolitik blev ikke fundet
+      Empty: Adgangskodealderpolitik er tom
+      NotExisting: Adgangskodealderpolitik findes ikke
+      AlreadyExists: Adgangskodealderpolitik findes allerede
+    OrgIAMPolicy:
+      Empty: Org IAM-politik er tom
+      NotExisting: Org IAM-politik findes ikke
+      AlreadyExists: Org IAM-politik findes allerede
+    NotificationPolicy:
+      NotFound: Notifikationspolitik blev ikke fundet
+      NotChanged: Notifikationspolitik er ikke ændret
+      AlreadyExists: Notifikationspolitik findes allerede
+    LabelPolicy:
+      NotFound: Privat etikettepolitik blev ikke fundet
+      NotChanged: Privat etikettepolitik er ikke ændret
+  Project:
+    ProjectIDMissing: Projekt-ID mangler
+    AlreadyExists: Projekt findes allerede på organisationen
+    OrgNotExisting: Organisationen findes ikke
+    UserNotExisting: Brugeren findes ikke
+    CouldNotGenerateClientSecret: Kunne ikke generere klienthemmelighed
+    Invalid: Projektet er ugyldigt
+    NotActive: Projektet er ikke aktivt
+    NotInactive: Projektet er ikke inaktiveret
+    NotFound: Projektet blev ikke fundet
+    UserIDMissing: Bruger-ID mangler
+    Member:
+      NotFound: Projektmedlem blev ikke fundet
+      Invalid: Projektmedlem er ugyldig
+      AlreadyExists: Projektmedlem findes allerede
+      NotExisting: Projektmedlem findes ikke
+    MinimumOneRoleNeeded: Mindst en rolle skal tilføjes
+    Role:
+      AlreadyExists: Rollen findes allerede
+      Invalid: Rollen er ugyldig
+      NotExisting: Rollen findes ikke
+    IDMissing: ID mangler
+    App:
+      AlreadyExists: Tjenesten findes allerede
+      NotFound: Tjenesten blev ikke fundet
+      Invalid: Tjenesten er ugyldig
+      NotExisting: Tjenesten findes ikke
+      NotActive: Tjenesten er ikke aktiv
+      NotInactive: Tjenesten er ikke inaktiv
+      OIDCConfigInvalid: OIDC-konfigurationen er ugyldig
+      APIConfigInvalid: API-konfigurationen er ugyldig
+      SAMLConfigInvalid: SAML-konfigurationen er ugyldig
+      IsNotOIDC: Tjenesten er ikke af typen OIDC
+      IsNotAPI: Tjenesten er ikke af typen API
+      IsNotSAML: Tjenesten er ikke af typen SAML
+      SAMLMetadataMissing: SAML-metadata mangler
+      SAMLMetadataFormat: SAML-metadataformatfejl
+      SAMLEntityIDAlreadyExisting: SAML EntityID findes allerede
+      OIDCAuthMethodNoSecret: Valgt OIDC-godkendelsesmetode kræver ingen hemmelighed
+      APIAuthMethodNoSecret: Valgt API-godkendelsesmetode kræver ingen hemmelighed
+      AuthMethodNoPrivateKeyJWT: Valgt godkendelsesmetode kræver ingen nøgle
+      ClientSecretInvalid: Klienthemmelighed er ugyldig
+      Key:
+        AlreadyExisting: Tjenestenøgle findes allerede
+        NotFound: Tjenestenøgle
+    RequiredFieldsMissing: Nogle obligatoriske felter mangler
+    Grant:
+      AlreadyExists: Projektets medgivelse findes allerede
+      NotFound: Projektets medgivelse blev ikke fundet
+      Invalid: Projektets medgivelse er ugyldig
+      NotExisting: Projektets medgivelse eksisterer ikke
+      HasNotExistingRole: En rolle eksisterer ikke i projektet
+      NotActive: Projektets medgivelse er ikke aktivt
+      NotInactive: Projektets medgivelse er ikke inaktivt
+  IAM:
+    NotFound: Instansen blev ikke fundet. Sørg for at du har den rigtige domæne. Tjek https://zitadel.com/docs/apis/introduction#domains
+    Member:
+      RolesNotChanged: Roller er ikke ændret
+    MemberInvalid: Medlemmet er ugyldigt
+    MemberAlreadyExisting: Medlemmet findes allerede
+    MemberNotExisting: Medlemmet eksisterer ikke
+    IDMissing: Id mangler
+    IAMProjectIDMissing: IAM-projekt-id mangler
+    IamProjectAlreadySet: IAM-projekt-id er allerede indstillet
+    IdpInvalid: IDP-konfigurationen er ugyldig
+    IdpNotExisting: IDP-konfigurationen eksisterer ikke
+    OIDCConfigInvalid: OIDC IDP-konfigurationen er ugyldig
+    IdpIsNotOIDC: IDP-konfigurationen er ikke af typen oidc
+    LoginPolicyInvalid: Loginpolitikken er ugyldig
+    LoginPolicyNotExisting: Loginpolitikken eksisterer ikke
+    IdpProviderInvalid: Identitetsleverandøren er ugyldig
+    LoginPolicy:
+      NotFound: Standardloginpolitik blev ikke fundet
+      NotChanged: Standardloginpolitik er ikke ændret
+      NotExisting: Standardloginpolitik eksisterer ikke
+      AlreadyExists: Standardloginpolitik findes allerede
+      RedirectURIInvalid: Standardomdirigerings-URI er ugyldig
+      MFA:
+        AlreadyExists: Multifaktor findes allerede
+        NotExisting: Multifaktor eksisterer ikke
+        Unspecified: Multifaktor er ugyldig
+      IDP:
+        AlreadyExists: Identitetsleverandøren findes allerede
+        NotExisting: Identitetsleverandøren eksisterer ikke
+        Invalid: Identitetsleverandøren er ugyldig
+      IDPConfig:
+        AlreadyExists: Identitetsleverandørskonfigurationen findes allerede
+        NotInactive: Identitetsleverandørskonfigurationen er ikke inaktiv
+        NotActive: Identitetsleverandørskonfigurationen er ikke aktiv
+    LabelPolicy:
+      NotFound: Standardprivat etikettepolitik blev ikke fundet
+      NotChanged: Standardprivat etikettepolitik er ikke ændret
+    MailTemplate:
+      NotFound: Standardmailmal blev ikke fundet
+      NotChanged: Standardmailmal er ikke ændret
+      AlreadyExists: Standardmailmal findes allerede
+      Invalid: Standardmailmal er ugyldig
+    CustomMessageText:
+      NotFound: Standardbeskedtekst blev ikke fundet
+      NotChanged: Standardbeskedtekst er ikke ændret
+      AlreadyExists: Standardbeskedtekst findes allerede
+      Invalid: Standardbeskedtekst er ugyldig
+    PasswordComplexityPolicy:
+      NotFound: Standardadgangskodekompleksitetspolitik blev ikke fundet
+      NotExisting: Standardadgangskodekompleksitetspolitik eksisterer ikke
+      AlreadyExists: Standardadgangskodekompleksitetspolitik findes allerede
+      Empty: Standardadgangskodekompleksitetspolitik er tom
+      NotChanged: Standardadgangskodekompleksitetspolitik er ikke ændret
+    PasswordAgePolicy:
+      NotFound: Standardadgangskodealderpolitik blev ikke fundet
+      NotExisting: Standardadgangskodealderpolitik eksisterer ikke
+      AlreadyExists: Standardadgangskodealderpolitik findes allerede
+      Empty: Standardadgangskodealderpolitik er tom
+      NotChanged: Standardadgangskodealderpolitik er ikke ændret
+    PasswordLockoutPolicy:
+      NotFound: Standardadgangskodelåsningpolitik blev ikke fundet
+      NotExisting: Standardadgangskodelåsningpolitik eksisterer ikke
+      AlreadyExists: Standardadgangskodelåsningpolitik findes allerede
+      Empty: Standardadgangskodelåsningpolitik er tom
+      NotChanged: Standardadgangskodelåsningpolitik er ikke ændret
+    DomainPolicy:
+      NotFound: Org IAM-politik blev ikke fundet
+      Empty: Org IAM-politik er tom
+      NotExisting: Org IAM-politik eksisterer ikke
+      AlreadyExists: Org IAM-politik findes allerede
+      NotChanged: Org IAM-politik er ikke ændret
+    NotificationPolicy:
+      NotFound: Standardnotifikationspolitik blev ikke fundet
+      NotChanged: Standardnotifikationspolitik er ikke ændret
+      AlreadyExists: Standardnotifikationspolitik findes allerede
+  Policy:
+    AlreadyExists: Politikken findes allerede
+    Label:
+      Invalid:
+        PrimaryColor: Primærfarven er ikke et gyldigt Hex-farveværdi
+        BackgroundColor: Baggrundsfarven er ikke et gyldigt Hex-farveværdi
+        WarnColor: Advarselsfarven er ikke et gyldigt Hex-farveværdi
+        FontColor: Skrifttypefarven er ikke et gyldigt Hex-farveværdi
+        PrimaryColorDark: Primærfarven (mørkt tema) er ikke et gyldigt Hex-farveværdi
+        BackgroundColorDark: Baggrundsfarven (mørkt tema) er ikke et gyldigt Hex-farveværdi
+        WarnColorDark: Advarselsfarven (mørkt tema) er ikke et gyldigt Hex-farveværdi
+        FontColorDark: Skrifttypefarven (mørkt tema) er ikke et gyldigt Hex-farveværdi
+  UserGrant:
+    AlreadyExists: Anvendarbevillingen findes allerede
+    NotFound: Anvendarbevillingen blev ikke fundet
+    Invalid: Anvendarbevillingen er ugyldig
+    NotChanged: Anvendarbevillingen er ikke ændret
+    IDMissing: Id mangler
+    NoPermissionForProject: Brugeren har ingen rettigheder i dette projekt
+    RoleKeyNotFound: Rollen blev ikke fundet
+  Member:
+    AlreadyExists: Medlemmet findes allerede
+  IDPConfig:
+    AlreadyExists: IDP-konfiguration med dette navn findes allerede
+    NotExisting: Identitetsleverandørskonfigurationen eksisterer ikke
+  Changes:
+    NotFound: Ingen historik blev fundet
+    AuditRetention: Historikken er uden for revisionsloggens opbevaringstid
+  Token:
+    NotFound: Token blev ikke fundet
+    Invalid: Token er ugyldig
+  UserSession:
+    NotFound: Brugersessionen blev ikke fundet
+  Key:
+    NotFound: Nøglen blev ikke fundet
+    ExpireBeforeNow: Udløbsdatoen er i fortiden
+  Login:
+    LoginPolicy:
+      MFA:
+        ForceAndNotConfigured: Multifaktor er konfigureret som obligatorisk, men ingen mulige leverandører er konfigureret. Kontakt venligst din systemadministrator.
+  Step:
+    Started:
+      AlreadyExists: Trinnet er allerede startet
+    Done:
+      AlreadyExists: Trinnet er allerede færdigt
+  CustomText:
+    AlreadyExists: Tilpasset tekst findes allerede
+    Invalid: Tilpasset tekst er ugyldig
+    NotFound: Tilpasset tekst blev ikke fundet
+  TranslationFile:
+    ReadError: Fejl ved læsning af oversættelsesfil
+    MergeError: Oversættelsesfilen kunne ikke slås sammen med tilpassede oversættelser
+    NotFound: Oversættelsesfilen eksisterer ikke
+  Metadata:
+    NotFound: Metadata blev ikke fundet
+    NoData: Metadatalisten er tom
+    Invalid: Metadata er ugyldig
+    KeyNotExisting: En eller flere nøgler eksisterer ikke
+  Action:
+    Invalid: Handlingen er ugyldig
+    NotFound: Handlingen blev ikke fundet
+    NotActive: Handlingen er ikke aktiv
+    NotInactive: Handlingen er ikke inaktiv
+    MaxAllowed: Ingen yderligere aktive handlinger tilladt
+    NotEnabled: Funktionen "Handling" er ikke aktiveret
+  Flow:
+    FlowTypeMissing: FlowType mangler
+    Empty: Flowet er allerede tomt
+    WrongTriggerType: TriggerType er ugyldig
+    NoChanges: Ingen ændringer
+    ActionIDsNotExist: ActionIDs eksisterer ikke
+  Query:
+    CloseRows: SQL-sætningen kunne ikke afsluttes
+    SQLStatement: SQL-sætningen kunne ikke oprettes
+    InvalidRequest: Anmodningen er ugyldig
+    TooManyNestingLevels: For mange niveauer af spørgsmålsnesting (Maks 20)
+    LimitExceeded: Grænsen blev overskredet
+  Quota:
+    AlreadyExists: Kvota findes allerede for denne enhed
+    NotFound: Kvota blev ikke fundet for denne enhed
+    Invalid:
+      CallURL: Kvotens anrops-URL er ugyldig
+      Percent: Kvotaprocenten er lavere end 1
+      Unimplemented: Kvoter er ikke implementeret for denne enhed
+      Amount: Kvotamængden er lavere end 1
+      ResetInterval: Kvotens nulstillingsinterval er kortere end et minut
+      Noop: En ubegribelig kvote uden notifikationer har ingen effekt
+    Access:
+      Exhausted: Kvoten for godkendte anmodninger er opbrugt
+    Execution:
+      Exhausted: Kvoten for eksekveringssekunder er opbrugt
+  LogStore:
+    Access:
+      StorageFailed: Opbevaring af adgangslog til databasen mislykkedes
+      ScanFailed: Forespørgslen om brugen af godkendte forespørgsler mislykkedes
+    Execution:
+      StorageFailed: Opbevaring af handlingslog til databasen mislykkedes
+      ScanFailed: Forespørgslen om brug af eksekveringstid mislykkedes
+  Session:
+    NotExisting: Sessionen eksisterer ikke
+    Terminated: Sessionen er allerede afsluttet
+    Expired: Sessionen er udløbet
+    PositiveLifetime: Sessionens levetid må ikke være mindre end 0
+    Token:
+      Invalid: Sessionstoken er ugyldigt
+    WebAuthN:
+      NoChallenge: Session uden WebAuthN-udfordring
+  Intent:
+    IDPMissing: IDP-ID mangler i anmodningen
+    IDPInvalid: IDP er ugyldig for anmodningen
+    ResponseInvalid: IDP-svar er ugyldigt
+    MissingSingleMappingAttribute: IDP-svar indeholder ikke mappningsattributtet eller har mere end en værdi
+    SuccessURLMissing: Success-URL mangler i anmodningen
+    FailureURLMissing: Fejl-URL mangler i anmodningen
+    StateMissing: State-parameter mangler i anmodningen
+    NotStarted: Intentionen er ikke startet eller er allerede afsluttet
+    NotSucceeded: Intentionen er ikke lykkedes
+    Expired: Intentionen er udløbet
+    TokenCreationFailed: Token-oprettelse mislykkedes
+    InvalidToken: Intentionstoken er ugyldig
+    OtherUser: Intentionen er beregnet til en anden bruger
+  AuthRequest:
+    AlreadyExists: Godkendelsesanmodning findes allerede
+    NotExisting: Godkendelsesanmodning eksisterer ikke
+    WrongLoginClient: Godkendelsesanmodning oprettet af en anden login-klient
+    AlreadyHandled: Godkendelsesanmodning er allerede behandlet
+  OIDCSession:
+    RefreshTokenInvalid: Opdateringstoken er ugyldigt
+    Token:
+      Invalid: Token er ugyldigt
+      Expired: Token er udløbet
+    InvalidClient: Token blev ikke udstedt til denne klient
+  SAMLRequest:
+    AlreadyExists: SAMLRequest findes allerede
+    NotExisting: SAMLRequest findes ikke
+    WrongLoginClient: SAMLRequest oprettet af en anden login-klient
+    AlreadyHandled: SAML-anmodning er allerede behandlet
+  SAMLSession:
+    InvalidClient: SAMLResponse blev ikke udstedt til den her klient
+  DeviceAuth:
+    NotFound: Anmodning om enhedsautorisering findes ikke
+    AlreadyHandled: Anmodning om enhedsautorisering er allerede behandlet
+  Feature:
+    NotExisting: Funktionen eksisterer ikke
+    TypeNotSupported: Funktionstype understøttes ikke
+    InvalidValue: Ugyldigt værdi for denne funktion
+  Target:
+    Invalid: Målet er ugyldigt
+    NoTimeout: Målet har ingen timeout
+    InvalidURL: Målet har en ugyldig URL
+    NotFound: Målet blev ikke fundet
+  Execution:
+    ConditionInvalid: Eksekveringsbetingelsen er ugyldig
+    Invalid: Eksekveringen er ugyldig
+    NotFound: Eksekveringen blev ikke fundet
+    IncludeNotFound: Inkluderingen blev ikke fundet
+    NoTargets: Ingen mål defineret
+    Failed: Udførelse mislykkedes
+    ResponseIsNotValidJSON: Svaret er ikke gyldigt JSON
+  UserSchema:
+    NotEnabled: Funktionen "Brugerskema" er ikke aktiveret
+    Type:
+      Missing: Brugerskematype mangler
+      AlreadyExists: Brugerskematype findes allerede
+    Authenticator:
+      Invalid: Ugyldig godkendelsestype
+    NotActive: Brugerskema ikke aktivt
+    NotInactive: Brugerskema ikke inaktivt
+    NotExists: Brugerskema eksisterer ikke
+    ID:
+      Missing: Brugerskema-ID mangler
+    Invalid: Ugyldigt brugerskema
+    Data:
+      Invalid: Data ugyldig for brugerskema
+  TokenExchange:
+    FeatureDisabled: Token Exchange-funktionen er deaktiveret for din instans. https://zitadel.com/docs/apis/resources/feature_service_v2/feature-service-set-instance-features
+    Token:
+      Missing: Token mangler
+      Invalid: Token er ugyldig
+      TypeMissing: Tokentype mangler
+      TypeNotAllowed: Tokentype er ikke tilladt
+      TypeNotSupported: Tokentype understøttes ikke
+      NotForAPI: Imitationstoken tillades ikke for API
+    Impersonation:
+      PolicyDisabled: Imitation er deaktiveret i instansens sikkerhedspolitik
+  WebKey:
+    ActiveDelete: Det er ikke muligt at fjerne aktiv webnøgle
+    Config: Ugyldig webnøglekonfiguration
+    Duplicate: Webnøgle-ID er ikke unikt
+    FeatureDisabled: Webnøglefunktion deaktiveret
+    NoActive: Ingen aktiv webnøgle blev fundet
+    NotFound: Webnøgle blev ikke fundet
+
+AggregateTypes:
+  action: Handling
+  instance: Instans
+  key_pair: Nøglepar
+  org: Organisation
+  project: Projekt
+  user: Bruger
+  usergrant: Brugerbevilling
+  quota: Kvote
+  feature: Funktion
+  target: Mål
+  execution: Udførelse
+  user_schema: Brugerskema
+  auth_request: Godkendelsesanmodning
+  device_auth: Enhedsgodkendelse
+  idpintent: IDP-hensigt
+  limits: Begrænsninger
+  milestone: Milepæl
+  oidc_session: OIDC-session
+  restrictions: Restriktioner
+  system: System
+  session: Session
+  web_key: Webnøgle
+  saml_request: SAML-anmodning
+  saml_session: SAML-session
+
+EventTypes:
+  execution:
+    set: Udførelse sat
+    removed: Udførelse fjernet
+  target:
+    added: Mål oprettet
+    changed: Mål ændret
+    removed: Mål fjernet
+  user:
+    added: Bruger tilføjet
+    selfregistered: Bruger selvregistreret
+    initialization:
+      code:
+        added: Initialiseringskode genereret
+        sent: Initialiseringskode sendt
+      check:
+        succeeded: Initialiseringskontrol lykkedes
+        failed: Initialiseringskontrol mislykkedes
+    token:
+      added: Adgangstoken oprettet
+      v2.added: Adgangstoken oprettet
+      removed: Adgangstoken fjernet
+    impersonated: Bruger imiteret
+    username:
+      reserved: Brugernavn reserveret
+      released: Brugernavn frigivet
+      changed: Brugernavn ændret
+    email:
+      reserved: E-mailadresse reserveret
+      released: E-mailadresse frigivet
+      changed: E-mailadresse ændret
+      verified: E-mailadresse verificeret
+      verification:
+        failed: E-postverifiering mislykkedes
+      code:
+        added: E-postverifieringskode genereret
+        sent: E-postverifieringskode sendt
+    machine:
+      added: Teknisk bruger tilføjet
+      changed: Teknisk bruger ændret
+      key:
+        added: Nøgle tilføjet
+        removed: Nøgle fjernet
+      secret:
+        set: Hemmelighed sat
+        updated: Hemmelighedshash opdateret
+        removed: Hemmelighed fjernet
+        check:
+          succeeded: Hemlighedskontrol lykkedes
+          failed: Hemlighedskontrol mislykkedes
+    human:
+      added: Person tilføjet
+      selfregistered: Person registrerede sig selv
+      avatar:
+        added: Avatar tilføjet
+        removed: Avatar fjernet
+      initialization:
+        code:
+          added: Initialiseringskode genereret
+          sent: Initialiseringskode sendt
+        check:
+          succeeded: Initialiseringskontrol lykkedes
+          failed: Initialiseringskontrol mislykkedes
+      invite:
+        code:
+          added: Invitationskode genereret
+          sent: Invitationskode sendt
+        check:
+          succeeded: Invitationskontrol lykkedes
+          failed: Invitationskontrol mislykkedes
+      username:
+        reserved: Brugernavn reserveret
+        released: Brugernavn frigivet
+      email:
+        changed: E-mailadresse ændret
+        verified: E-mailadresse verificeret
+        verification:
+          failed: E-mailadresse verifiering mislykkedes
+        code:
+          added: E-mailadresse verifieringskode genereret
+          sent: E-mailadresse verifieringskode sendt
+      password:
+        changed: Adangskode ændret
+        code:
+          added: Adgangskode-kode genereret
+          sent: Adgangskode-kode sendt
+        check:
+          succeeded: Adgangskodekontrol lykkedes
+          failed: Adgangskodekontrol mislykkedes
+        change:
+          sent: Adgangskode ændring sendt
+        hash:
+          updated: Adgangskode hash opdateret
+      externallogin:
+        check:
+          succeeded: Ekstern login lykkedes
+      externalidp:
+        added: Ekstern IDP tilføjet
+        removed: Ekstern IDP fjernet
+        cascade:
+          removed: Ekstern IDP kaskade fjernet
+        id:
+          migrated: Ekstern bruger-ID for IDP migreteret
+      phone:
+        changed: Mobilnummer ændret
+        verified: Mobilnummer verificeret
+        verification:
+          failed: Mobilnummer-verifiering mislykkedes
+        code:
+          added: Mobilnummer-kode genereret
+          sent: Mobilnummer-kode sendt
+        removed: Mobilnummer fjernet
+      profile:
+        changed: Brugerprofil ændret
+      address:
+        changed: Brugeradresse ændret
+      mfa:
+        otp:
+          added: Multifaktor OTP tilføjet
+          verified: Multifaktor OTP verificeret
+          removed: Multifaktor OTP fjernet
+          check:
+            succeeded: Multifaktor OTP-kontrol lykkedes
+            failed: Multifaktor OTP-kontrol mislykkedes
+          sms:
+            added: Multifaktor OTP SMS tilføjet
+            removed: Multifaktor OTP SMS fjernet
+            code:
+              added: Multifaktor OTP SMS-kode tilføjet
+              sent: Multifaktor OTP SMS-kode sendt
+            check:
+              succeeded: Multifaktor OTP SMS-kontrol lykkedes
+              failed: Multifaktor OTP SMS-kontrol mislykkedes
+          email:
+            added: Multifaktor OTP E-mail tilføjet
+            removed: Multifaktor OTP E-mail fjernet
+            code:
+              added: Multifaktor OTP E-mail kode tilføjet
+              sent: Multifaktor OTP E-mail kode sendt
+            check:
+              succeeded: Multifaktor OTP E-emailkontrol lykkedes
+              failed: Multifaktor OTP E-emailkontrol mislykkedes
+        u2f:
+          token:
+            added: Multifaktor U2F-token tilføjet
+            verified: Multifaktor U2F-token verificeret
+            removed: Multifaktor U2F-token fjernet
+            begin:
+              login: Multifaktor U2F-verifikation startet
+            check:
+              succeeded: Multifaktor U2F-kontrol lykkedes
+              failed: Multifaktor U2F-kontrol mislykkedes
+            signcount:
+              changed: Kontrolsummen for Multifaktor U2F-token er blevet ændret
+        init:
+          skipped: Multifaktor initialisering sprunget over
+      passwordless:
+        token:
+          added: Token for adgangskodefri login tilføjet
+          verified: Token for adgangskodefri login verificeret
+          removed: Token for adgangskodefri login fjernet
+          begin:
+            login: Adgangskodefri login-kontrol startet
+          check:
+            succeeded: adgangskodefri login-kontrol lykkedes
+            failed: adgangskodefri login-kontrol mislykkedes
+          signcount:
+            changed: Kontrolsummen af adgangskodefri login-token er blevet ændret
+        initialization:
+          code:
+            added: Kode til adgangskodefri initialisering tilføjet
+            sent: Kode til adgangskodefri initialisering sendt
+            requested: Kode til adgangskodefri initialisering anmodet
+            check:
+              succeeded: Kontrol af kode til adgangskodefri initialisering lykkedes
+              failed: Kontrol af kode til adgangskodefri initialisering mislykkedes
+      signed:
+        out: Bruger loggede ud
+      refresh:
+        token:
+          added: Opdateringstoken oprettet
+          renewed: Opdateringstoken fornyet
+          removed: Opdateringstoken fjernet
+    locked: Bruger låst
+    unlocked: Bruger låst op
+    deactivated: Bruger deaktiveret
+    reactivated: Bruger genaktiveret
+    removed: Bruger fjernet
+    password:
+      changed: Adgangskode ændret
+      code:
+        added: Adgangskode-kode genereret
+        sent: Adgangskode-kode sendt
+      check:
+        succeeded: Adgangskodekontrol lykkedes
+        failed: Adgangskodekontrol mislykkedes
+    phone:
+      changed: Mobilnummer ændret
+      verified: Mobilnummer verificeret
+      verification:
+        failed: Verificering af Mobilnummer mislykkedes
+      code:
+        added: Mobilnummer-kode genereret
+        sent: Mobilnummer-kode sendt
+
+    profile:
+      changed: Brugerprofil ændret
+    address:
+      changed: Brugeradresse ændret
+    mfa:
+      otp:
+        added: Multifaktor OTP tilføjet
+        verified: Multifaktor OTP verificeret
+        removed: Multifaktor OTP fjernet
+        check:
+          succeeded: Multifaktor OTP-kontrol lykkedes
+          failed: Multifaktor OTP-kontrol mislykkedes
+        init:
+          skipped: Springet over Multifaktor OTP-initialisering
+      init:
+        skipped: Springede over Multifaktor initialisering
+    signed:
+      out: Bruger udlogget
+    grant:
+      added: Auktorisering tilføjet
+      changed: Auktorisering ændret
+      removed: Auktorisering fjernet
+      deactivated: Auktorisering deaktiveret
+      reactivated: Auktorisering genaktiveret
+      reserved: Auktorisering reserveret
+      released: Auktorisering frigivet
+      cascade:
+        removed: Auktorisering fjernet
+        changed: Auktorisering ændret
+    metadata:
+      set: Brugerdata indstillet
+      removed: Brugerdata fjernet
+      removed.all: Alle brugerdata fjernet
+    domain:
+      claimed: Domæne ansøgt
+      claimed.sent: Meddelelse om ansøgt domæne sendt
+    pat:
+      added: Personlig adgangstoken tilføjet
+      removed: Personlig adgangstoken fjernet
+  org:
+    added: Organisation tilføjet
+    changed: Organisation ændret
+    deactivated: Organisation deaktiveret
+    reactivated: Organisation genaktiveret
+    removed: Organisation fjernet
+    domain:
+      added: Domæne tilføjet
+      verification:
+        added: Domæneverificering tilføjet
+        failed: Domæneverificering mislykkedes
+      verified: Domæne verificeret
+      removed: Domæne fjernet
+      primary:
+        set: Primær domæne indstillet
+      reserved: Domæne reserveret
+      released: Domæne frigivet
+    name:
+      reserved: Organisationsnavn reserveret
+      released: Organisationsnavn frigivet
+    member:
+      added: Organisationsmedlem tilføjet
+      changed: Organisationsmedlem ændret
+      removed: Organisationsmedlem fjernet
+      cascade:
+        removed: Organisationsmedlemskabs-kaskaden er fjernet
+    iam:
+      policy:
+        added: Systempolitik tilføjet
+        changed: Systempolitik ændret
+        removed: Systempolitik fjernet
+    idp:
+      config:
+        added: IDP-konfiguration tilføjet
+        changed: IDP-konfiguration ændret
+        removed: IDP-konfiguration fjernet
+        deactivated: IDP-konfiguration deaktiveret
+        reactivated: IDP-konfiguration genaktiveret
+      oidc:
+        config:
+          added: OIDC IDP-konfiguration tilføjet
+          changed: OIDC IDP-konfiguration ændret
+      saml:
+        config:
+          added: SAML IDP-konfiguration tilføjet
+          changed: SAML IDP-konfiguration ændret
+      jwt:
+        config:
+          added: JWT IDP-konfiguration tilføjet
+          changed: JWT IDP-konfiguration ændret
+    customtext:
+      set: Tilpasset tekst indstillet
+      removed: Tilpasset tekst fjernet
+      template:
+        removed: Tilpasset tekstmal fjernet
+    policy:
+      login:
+        added: Loginpolitik tilføjet
+        changed: Loginpolitik ændret
+        removed: Loginpolitik fjernet
+        idpprovider:
+          added: Identitetsleverandør tilføjet til loginpolitik
+          removed: Identitetsleverandør fjernet fra loginpolitik
+          cascade:
+            removed: Identitetsudbyderkaskade fjernet fra loginpolitik

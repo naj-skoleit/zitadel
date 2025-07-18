@@ -266,6 +266,7 @@ RegistrationUser:
   Hungarian: Magyar
   Korean: 한국어
   Romanian: Română
+  Danish: Dansk
   GenderLabel: Genere
   Female: Femminile
   Male: Maschile
@@ -310,6 +311,7 @@ ExternalRegistrationUserOverview:
   Hungarian: Magyar
   Korean: 한국어
   Romanian: Română
+  Danish: Dansk
   TosAndPrivacyLabel: Termini di servizio
   TosConfirm: Accetto i
   TosLinkText: Termini di servizio
@@ -388,6 +390,7 @@ ExternalNotFound:
   Hungarian: Magyar
   Korean: 한국어
   Romanian: Română
+  Danish: Dansk
 
 DeviceAuth:
   Title: Autorizzazione del dispositivo

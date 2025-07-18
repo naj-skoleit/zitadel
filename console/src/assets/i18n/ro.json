@@ -1543,7 +1543,8 @@
         "id": "Bahasa Indonesia",
         "hu": "Magyar",
         "ko": "한국어",
-        "ro": "Română"
+        "ro": "Română",
+        "da": "Dansk"
       }
     },
     "SMTP": {
@@ -1792,7 +1793,8 @@
         "id": "Bahasa Indonesia",
         "hu": "Magyar",
         "ko": "한국어",
-        "ro": "Română"
+        "ro": "Română",
+        "da": "Dansk"
       },
       "KEYS": {
         "emailVerificationDoneText": "Verificarea e-mailului efectuată",
@@ -2769,7 +2771,8 @@
     "id": "Bahasa Indonesia",
     "hu": "Magyar",
     "ko": "한국어",
-    "ro": "Română"
+    "ro": "Română",
+    "da": "Dansk"
   },
   "MEMBER": {
     "ADD": "Adăugați un manager",

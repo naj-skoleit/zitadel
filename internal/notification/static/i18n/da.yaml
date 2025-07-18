@@ -1,0 +1,68 @@
+InitCode:
+  Title: Initialiser bruger
+  PreHeader: Initialiser bruger
+  Subject: Initialiser bruger
+  Greeting: Hej {{.DisplayName}},
+  Text: Din bruger er blevet oprettet. Brug brugernavnet {{.PreferredLoginName}} for at logge ind. Klik på knappen nedenfor for at gennemføre initialiserings-processen. (Kode {{.Code}}) Hvis du ikke har anmodet om denne besked, bedes du ignorere den.
+  ButtonText: Fuldfør verifikation
+PasswordReset:
+  Title: Nulstil adgangskode
+  PreHeader: Nulstil adgangskode
+  Subject: Nulstil adgangskode
+  Greeting: Hej {{.DisplayName}},
+  Text: Vi har modtaget en anmodning om at nulstille adgangskoden. Brug knappen nedenfor for at nulstille din adgangskode. (Kode {{.Code}}) Hvis du ikke har anmodet om denne besked, bedes du ignorere den.
+  ButtonText: Nulstil adgangskode
+VerifyEmail:
+  Title: Verificer e-mail
+  PreHeader: Verificer e-mail
+  Subject: Verificer e-mail
+  Greeting: Hej {{.DisplayName}},
+  Text: En ny e-mailadresse er blevet tilføjet. Brug knappen nedenfor for at verificere din e-mail. (Kode {{.Code}}) Hvis du ikke har tilføjet en ny e-mailadresse, bedes du ignorere denne mail.
+  ButtonText: Verificer e-mail
+VerifyPhone:
+  Title: Verificer telefon
+  PreHeader: Verificer telefon
+  Subject: Verificer telefon
+  Greeting: Hej {{.DisplayName}},
+  Text: Et nyt mobilnummer er blevet tilføjet. Brug følgende kode for at verificere det {{.Code}}
+  ButtonText: Verificer telefon
+VerifyEmailOTP:
+  Title: Verificer engangskode
+  PreHeader: Verificer engangskode
+  Subject: Verificer engangskode
+  Greeting: Hej {{.DisplayName}},
+  Text: Brug engangskoden {{.OTP}} for at autentificere inden for de næste fem minutter eller klik på "Autentificer"-knappen.
+  ButtonText: Autentificer
+VerifySMSOTP:
+  Text: >-
+    {{.OTP}} er din engangskode til {{ .Domain }}. Brug den inden for {{.Expiry}}.
+    
+    @{{.Domain}} #{{.OTP}}
+DomainClaimed:
+  Title: Domæne er blevet gjort krav på
+  PreHeader: Ændre e-mail / brugernavn
+  Subject: Domæne er blevet gjort krav på
+  Greeting: Hej {{.DisplayName}},
+  Text: Domænenavnet {{.Domain}} er blevet gjort krav på af en organisation. Din nuværende bruger {{.Username}} er ikke en del af denne organisation. Derfor skal du ændre din e-mail, når du logger ind. Vi har oprettet et midlertidigt brugernavn ({{.TempUsername}}) til denne login.
+  ButtonText: Log ind
+PasswordlessRegistration:
+  Title: Tilføj adgangskodefri login
+  PreHeader: Tilføj adgangskodefri login
+  Subject: Tilføj adgangskodefri login
+  Greeting: Hej {{.DisplayName}},
+  Text: Vi har modtaget en anmodning om at tilføje en token til adgangskodefri login. Brug knappen nedenfor for at tilføje din token eller enhed til adgangskodefri login.
+  ButtonText: Tilføj adgangskodefri login
+PasswordChange:
+  Title: Brugerens adgangskode er ændret
+  PreHeader: Ændre adgangskode
+  Subject: Brugerens adgangskode er ændret
+  Greeting: Hej {{.DisplayName}},
+  Text: Adgangskoden til din bruger er blevet ændret. Hvis denne ændring ikke blev foretaget af dig, bedes du nulstille din adgangskode straks.
+  ButtonText: Log ind
+InviteUser:
+  Title: Invitation til {{.ApplicationName}}
+  PreHeader: Invitation til {{.ApplicationName}}
+  Subject: Invitation til {{.ApplicationName}}
+  Greeting: Hej {{.DisplayName}},
+  Text: Din bruger er blevet inviteret til {{.ApplicationName}}. Klik på knappen nedenfor for at fuldføre invitationsprocessen. Hvis du ikke har anmodet om denne e-mail, bedes du ignorere den.
+  ButtonText: Accepter invitation

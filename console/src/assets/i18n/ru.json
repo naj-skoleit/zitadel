@@ -1590,7 +1590,8 @@
         "id": "Bahasa Indonesia",
         "hu": "Magyar",
         "ko": "한국어",
-        "ro": "Română"
+        "ro": "Română",
+        "da": "Dansk"
       }
     },
     "SMTP": {
@@ -1851,7 +1852,8 @@
         "id": "Bahasa Indonesia",
         "hu": "Magyar",
         "ko": "한국어",
-        "ro": "Română"
+        "ro": "Română",
+        "da": "Dansk"
       },
       "LOCALE": "Код языка",
       "LOCALES": {
@@ -2857,7 +2859,8 @@
     "id": "Bahasa Indonesia",
     "hu": "Magyar",
     "ko": "한국어",
-    "ro": "Română"
+    "ro": "Română",
+    "da": "Dansk"
   },
   "MEMBER": {
     "ADD": "Добавить менеджера",
